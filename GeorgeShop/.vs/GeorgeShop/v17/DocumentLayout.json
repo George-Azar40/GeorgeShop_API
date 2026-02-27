@@ -1,0 +1,374 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\dto\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\dto\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\dto\\response\\categorytranslationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\dto\\response\\categorytranslationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\repository\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\repository\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAE0C02-32FB-4C74-9FDD-6317A5007ACC}|GeorgeShop.BLL\\GeorgeShop.BLL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.bll\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AAE0C02-32FB-4C74-9FDD-6317A5007ACC}|GeorgeShop.BLL\\GeorgeShop.BLL.csproj|solutionrelative:georgeshop.bll\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAE0C02-32FB-4C74-9FDD-6317A5007ACC}|GeorgeShop.BLL\\GeorgeShop.BLL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.bll\\service\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AAE0C02-32FB-4C74-9FDD-6317A5007ACC}|GeorgeShop.BLL\\GeorgeShop.BLL.csproj|solutionrelative:georgeshop.bll\\service\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\dto\\request\\categorytranslationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\dto\\request\\categorytranslationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\dto\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\dto\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\models\\categorytranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\models\\categorytranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\resources\\sharedresources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\resources\\sharedresources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\georgeshop.pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\georgeshop.pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{311F31C5-762F-4A89-B287-89B5C1E303D5}|GeorgeShop.PL\\GeorgeShop.PL.csproj|solutionrelative:georgeshop.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\georgeshop.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\georgeshop.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|c:\\users\\crc\\desktop\\george\\back-end\\api\\api final project\\georgeshop\\georgeshop.dal\\migrations\\20260224120102_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC89167A-B652-43B4-9B68-09EBED85D040}|GeorgeShop.DAL\\GeorgeShop.DAL.csproj|solutionrelative:georgeshop.dal\\migrations\\20260224120102_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.BLL\\Service\\CategoryService.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.BLL\\Service\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.BLL\\Service\\CategoryService.cs",
+              "RelativeToolTip": "GeorgeShop.BLL\\Service\\CategoryService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswB8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:15:00.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Repository\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\CategoryRepository.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Repository\\CategoryRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwA0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T13:22:42.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T12:53:25.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryTranslationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Response\\CategoryTranslationResponse.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\DTO\\Response\\CategoryTranslationResponse.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Response\\CategoryTranslationResponse.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\DTO\\Response\\CategoryTranslationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T12:51:50.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Repository\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\IGenericRepository.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Repository\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T11:27:49.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Repository\\GenericRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T11:30:10.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Repository\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Repository\\ICategoryRepository.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Repository\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T13:51:16.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "GeorgeShop.PL\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T14:50:27.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "GeorgeShop.PL\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T14:12:47.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.BLL\\Service\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.BLL\\Service\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.BLL\\Service\\ICategoryService.cs",
+              "RelativeToolTip": "GeorgeShop.BLL\\Service\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:14:39.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Program.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\Program.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Program.cs",
+              "RelativeToolTip": "GeorgeShop.PL\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T16:12:31.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoryTranslationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Request\\CategoryTranslationRequest.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\DTO\\Request\\CategoryTranslationRequest.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Request\\CategoryTranslationRequest.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\DTO\\Request\\CategoryTranslationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T12:18:22.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Models\\Category.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T14:49:12.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T12:11:28.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoryTranslation.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Models\\CategoryTranslation.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Models\\CategoryTranslation.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Models\\CategoryTranslation.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Models\\CategoryTranslation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T09:37:22.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260224120102_initial.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Migrations\\20260224120102_initial.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Migrations\\20260224120102_initial.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Migrations\\20260224120102_initial.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Migrations\\20260224120102_initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T12:01:03.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "GeorgeShop.DAL\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T14:45:18.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\appsettings.Development.json",
+              "RelativeToolTip": "GeorgeShop.PL\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-17T16:25:43.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SharedResources.resx",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Resources\\SharedResources.resx",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\Resources\\SharedResources.resx",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\Resources\\SharedResources.resx",
+              "RelativeToolTip": "GeorgeShop.PL\\Resources\\SharedResources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-02-22T13:38:28.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GeorgeShop.DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\GeorgeShop.DAL.csproj",
+              "RelativeDocumentMoniker": "GeorgeShop.DAL\\GeorgeShop.DAL.csproj",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.DAL\\GeorgeShop.DAL.csproj",
+              "RelativeToolTip": "GeorgeShop.DAL\\GeorgeShop.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-17T14:42:24.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GeorgeShop.PL.csproj",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\GeorgeShop.PL.csproj",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\GeorgeShop.PL.csproj",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\GeorgeShop.PL.csproj",
+              "RelativeToolTip": "GeorgeShop.PL\\GeorgeShop.PL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-17T14:32:58.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\appsettings.json",
+              "RelativeDocumentMoniker": "GeorgeShop.PL\\appsettings.json",
+              "ToolTip": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.PL\\appsettings.json",
+              "RelativeToolTip": "GeorgeShop.PL\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-17T16:18:39.479Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

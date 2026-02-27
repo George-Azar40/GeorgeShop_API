@@ -1,0 +1,15 @@
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\bin\Debug\net9.0\GeorgeShop.BLL.deps.json
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\bin\Debug\net9.0\GeorgeShop.BLL.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\bin\Debug\net9.0\GeorgeShop.BLL.pdb
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\bin\Debug\net9.0\GeorgeShop.DAL.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\bin\Debug\net9.0\GeorgeShop.DAL.pdb
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.csproj.AssemblyReference.cache
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.AssemblyInfoInputs.cache
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.AssemblyInfo.cs
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.csproj.CoreCompileInputs.cache
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeSh.42E82C83.Up2Date
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\refint\GeorgeShop.BLL.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\GeorgeShop.BLL.pdb
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.BLL\obj\Debug\net9.0\ref\GeorgeShop.BLL.dll
