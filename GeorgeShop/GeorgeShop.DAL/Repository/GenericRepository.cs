@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,16 +18,38 @@ namespace GeorgeShop.DAL.Repository
             _context = context;
         }
 
-        public async Task<T> CreateAsync(T entity)
+        public async Task<T> CreateAsync(T entity, CancellationToken cancellationToken)
         {
-            await _context.AddAsync(entity);
-            await _context.SaveChangesAsync();
+            await _context.AddAsync(entity , cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
             return entity;
         }
 
-        public async Task<List<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync(string[]? includes = null)
         {
-            return await _context.Set<T>().ToListAsync();
+            IQueryable<T> querry = _context.Set<T>();
+            if(includes != null)
+            {
+                foreach(var include in includes)
+                {
+                    querry = querry.Include(include);
+                }
+            }
+            return await querry.ToListAsync();
+        }
+
+        public async Task<T> GetOne(Expression<Func<T,bool>> filter,string[]? includes = null)
+        {
+            IQueryable<T> querry = _context.Set<T>();
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    querry = querry.Include(include);
+                }
+            }
+
+            return await querry.FirstOrDefaultAsync(filter);
         }
     }
 }

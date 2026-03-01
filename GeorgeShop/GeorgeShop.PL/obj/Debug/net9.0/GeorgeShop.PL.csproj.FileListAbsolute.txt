@@ -174,3 +174,4 @@ C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Mapster.dll
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Mapster.Core.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\obj\Debug\net9.0\GeorgeShop.PL.sourcelink.json

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,9 @@ namespace GeorgeShop.DAL.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<List<T>> GetAllAsync();
-        Task<T> CreateAsync(T category);
+        Task<List<T>> GetAllAsync(string[] strings);
+        Task<T> CreateAsync(T category , CancellationToken cancellationToken);
+        Task<T> GetOne(Expression<Func<T, bool>> filter, string[]? includes = null);
+
     }
 }

@@ -50,7 +50,13 @@ namespace GeorgeShop.PL
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<ICategoryService,CategoryService>();
 
+
+
+
             var app = builder.Build();
+
+
+          
 
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 

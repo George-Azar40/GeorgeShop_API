@@ -12,3 +12,4 @@ C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.DAL\obj\Debug\net9.0\GeorgeShop.DAL.pdb
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.DAL\obj\Debug\net9.0\GeorgeShop.DAL.genruntimeconfig.cache
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.DAL\obj\Debug\net9.0\ref\GeorgeShop.DAL.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.DAL\obj\Debug\net9.0\GeorgeShop.DAL.sourcelink.json

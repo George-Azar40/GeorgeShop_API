@@ -27,9 +27,9 @@ namespace GeorgeShop.PL.Controllers
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> Create(CategoryRequest request)
+        public async Task<IActionResult> Create(CategoryRequest request , CancellationToken cancellationToken )
         {
-            var response = await _categoryService.CreateCategory(request);
+            var response = await _categoryService.CreateCategory(request , cancellationToken);
            
             return Ok(new
             {
@@ -48,6 +48,13 @@ namespace GeorgeShop.PL.Controllers
                 data = categories,
                 message = _localizer["Success"].Value 
             });
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            return Ok( await _categoryService.GetCategory(c => c.Id == id) ) ;
         }
     }
 }
