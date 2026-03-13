@@ -12,7 +12,11 @@ namespace GeorgeShop.DAL.Repository
     {
         Task<List<T>> GetAllAsync(string[] strings);
         Task<T> CreateAsync(T category , CancellationToken cancellationToken);
-        Task<T> GetOne(Expression<Func<T, bool>> filter, string[]? includes = null);
+        Task<T?> GetOne(Expression<Func<T, bool>> filter, string[]? includes = null);
+        Task<bool> DeleteAsync(T entity);
+        
+
+        Task<bool> UpdateAsync(T entity);
 
     }
 }

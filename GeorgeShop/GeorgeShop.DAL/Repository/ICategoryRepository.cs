@@ -1,4 +1,5 @@
-﻿using GeorgeShop.DAL.Models;
+﻿using GeorgeShop.DAL.DTO.Request;
+using GeorgeShop.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,5 @@ namespace GeorgeShop.DAL.Repository
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
-
     }
 }

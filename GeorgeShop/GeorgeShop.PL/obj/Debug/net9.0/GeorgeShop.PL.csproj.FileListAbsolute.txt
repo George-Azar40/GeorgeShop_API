@@ -175,3 +175,9 @@ C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Mapster.dll
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Mapster.Core.dll
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\obj\Debug\net9.0\GeorgeShop.PL.sourcelink.json
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

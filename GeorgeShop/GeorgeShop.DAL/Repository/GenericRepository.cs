@@ -25,6 +25,16 @@ namespace GeorgeShop.DAL.Repository
             return entity;
         }
 
+        public async Task<bool> DeleteAsync(T entity)
+        {
+            _context.Remove(entity);
+            var affected = await _context.SaveChangesAsync();
+
+            return affected > 0;
+        }
+
+        
+
         public async Task<List<T>> GetAllAsync(string[]? includes = null)
         {
             IQueryable<T> querry = _context.Set<T>();
@@ -38,7 +48,7 @@ namespace GeorgeShop.DAL.Repository
             return await querry.ToListAsync();
         }
 
-        public async Task<T> GetOne(Expression<Func<T,bool>> filter,string[]? includes = null)
+        public async Task<T?> GetOne(Expression<Func<T,bool>> filter,string[]? includes = null)
         {
             IQueryable<T> querry = _context.Set<T>();
             if (includes != null)
@@ -51,5 +61,17 @@ namespace GeorgeShop.DAL.Repository
 
             return await querry.FirstOrDefaultAsync(filter);
         }
+
+
+        public async Task<bool> UpdateAsync(T entity)
+        {
+            
+            _context.Update(entity);
+            var effected = await _context.SaveChangesAsync();
+
+            return effected > 0;
+        }
+
+
     }
 }

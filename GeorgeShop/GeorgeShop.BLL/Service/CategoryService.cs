@@ -24,9 +24,17 @@ namespace GeorgeShop.BLL.Service
         {
             var category = request.Adapt<Category>();
             await Task.Delay(5000, cancellationToken);
-            await _categoryRepository.CreateAsync(category , cancellationToken);
+            await _categoryRepository.CreateAsync(category, cancellationToken);
 
             return category.Adapt<CategoryResponse>();
+        }
+
+        public async Task<bool> DeleteCategory(int id)
+        {
+            var category = await _categoryRepository.GetOne(c => c.Id == id);
+            if (category == null)
+                return false;
+            return await _categoryRepository.DeleteAsync(category);
         }
 
         public async Task<List<CategoryResponse>> GetAllCategories()
@@ -38,14 +46,31 @@ namespace GeorgeShop.BLL.Service
             return categories.Adapt<List<CategoryResponse>>();
         }
 
-        public async Task<CategoryResponse?> GetCategory(Expression<Func<Category,bool>> filter)
+        public async Task<CategoryResponse?> GetCategory(Expression<Func<Category, bool>> filter)
         {
-            var category = await _categoryRepository.GetOne(filter , new string[]
+            var category = await _categoryRepository.GetOne(filter, new string[]
             {
                 nameof(Category.Translations)
             });
 
             return category.Adapt<CategoryResponse>();
         }
+
+        public async Task<CategoryResponse> UpdateCategory(int id)
+        {
+
+
+            var category = await _categoryRepository.GetOne(c => c.Id == id,
+            new string[]
+            {
+                nameof(Category.Translations)
+            });
+
+            if (category == null)
+                return null;
+
+            return category.Adapt<CategoryResponse>();
+        }
+
     }
 }

@@ -6,6 +6,7 @@ using GeorgeShop.DAL.Models;
 using GeorgeShop.DAL.Repository;
 using GeorgeShop.PL.Resources;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ namespace GeorgeShop.PL.Controllers
         }
 
         [HttpPost("")]
+        [Authorize]
         public async Task<IActionResult> Create(CategoryRequest request , CancellationToken cancellationToken )
         {
             var response = await _categoryService.CreateCategory(request , cancellationToken);
@@ -55,6 +57,43 @@ namespace GeorgeShop.PL.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             return Ok( await _categoryService.GetCategory(c => c.Id == id) ) ;
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _categoryService.DeleteCategory(id);
+
+            if (!deleted)
+            {
+                return NotFound( new
+                {
+                    message = _localizer["NotFound"].Value
+                });
+            }
+
+            return Ok(new
+            {
+                message = _localizer["Success"].Value
+            });
+        }
+
+        [HttpPut("{id}")]
+
+        public async Task<IActionResult> Update(int id)
+        {
+            var updated = await _categoryService.UpdateCategory(id);
+            if (updated == null)
+            {
+                return NotFound(new
+                {
+                    message = _localizer["NotFound"].Value
+                });
+            }
+            return Ok(new
+            {
+                message = _localizer["Success"].Value
+            });
         }
     }
 }

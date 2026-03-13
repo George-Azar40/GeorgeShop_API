@@ -16,5 +16,10 @@ namespace GeorgeShop.BLL.Service
         Task<CategoryResponse> CreateCategory(CategoryRequest request , CancellationToken cancellationToken);
 
         Task<CategoryResponse?> GetCategory(Expression<Func<Category, bool>> filter);
+
+        Task<bool> DeleteCategory(int  id);
+
+        Task<CategoryResponse> UpdateCategory(int id);
+
     }
 }
