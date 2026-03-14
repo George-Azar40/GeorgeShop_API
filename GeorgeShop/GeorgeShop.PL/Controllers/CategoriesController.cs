@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using System.Security.Claims;
 
 namespace GeorgeShop.PL.Controllers
 {
@@ -31,6 +32,7 @@ namespace GeorgeShop.PL.Controllers
         [Authorize]
         public async Task<IActionResult> Create(CategoryRequest request , CancellationToken cancellationToken )
         {
+            //var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var response = await _categoryService.CreateCategory(request , cancellationToken);
            
             return Ok(new
@@ -60,6 +62,7 @@ namespace GeorgeShop.PL.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
             var deleted = await _categoryService.DeleteCategory(id);

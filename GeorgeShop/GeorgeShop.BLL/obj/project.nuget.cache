@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "shq5/i2c2oE=",
+  "dgSpecHash": "cqm0N/bFfaA=",
   "success": true,
   "projectFilePath": "C:\\Users\\CRC\\Desktop\\george\\Back-end\\API\\API Final Project\\GeorgeShop\\GeorgeShop.BLL\\GeorgeShop.BLL.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\CRC\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.14\\microsoft.aspnetcore.authentication.jwtbearer.9.0.14.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.13\\microsoft.aspnetcore.cryptography.internal.9.0.13.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.13\\microsoft.aspnetcore.cryptography.keyderivation.9.0.13.nupkg.sha512",
+    "C:\\Users\\CRC\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.9\\microsoft.aspnetcore.http.abstractions.2.3.9.nupkg.sha512",
+    "C:\\Users\\CRC\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\9.0.13\\microsoft.aspnetcore.identity.entityframeworkcore.9.0.13.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.6\\microsoft.data.sqlclient.5.1.6.nupkg.sha512",
@@ -58,7 +60,7 @@
     "C:\\Users\\CRC\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
-    "C:\\Users\\CRC\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\CRC\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\system.text.json\\9.0.13\\system.text.json.9.0.13.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\CRC\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
