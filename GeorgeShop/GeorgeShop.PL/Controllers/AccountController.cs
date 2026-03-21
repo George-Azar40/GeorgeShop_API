@@ -1,4 +1,5 @@
-﻿using GeorgeShop.BLL.Service;
+﻿using Azure.Core;
+using GeorgeShop.BLL.Service;
 using GeorgeShop.DAL.DTO.Request;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,25 @@ namespace GeorgeShop.PL.Controllers
             if(isConfirmed)
                 return Ok();
             return BadRequest();
+        }
+
+
+        [HttpPost("SendCode")]
+        public async Task<IActionResult> RequestPassword(ForgetPasswordRequest request)
+        {
+            var result = await _authenticationService.RequestPasswordResetAsync(request);
+
+            if(!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
+
+        [HttpPost("resetPassword")]
+        public async Task<IActionResult> PasswordReset(ResetPasswordRequest request)
+        {
+            var result = await _authenticationService.ResetPasswordAsync(request);
+
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
         }
     }
 }

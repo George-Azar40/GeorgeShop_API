@@ -13,6 +13,8 @@ namespace GeorgeShop.BLL.Service
         Task<RegisterResponse> RegisterAsync(RegisterRequest request);
         Task<LoginResponse> LoginAsync(LoginRequest request);
         Task<bool> confirmEmailAsync(string token, string id);
+        Task<ForgetPasswordResponse> RequestPasswordResetAsync(ForgetPasswordRequest request);
+        Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordRequest request);
 
 
     }

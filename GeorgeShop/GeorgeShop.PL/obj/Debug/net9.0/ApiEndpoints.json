@@ -53,6 +53,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GeorgeShop.PL.Controllers.AccountController",
+    "Method": "PasswordReset",
+    "RelativePath": "api/Account/resetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GeorgeShop.DAL.DTO.Request.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeorgeShop.PL.Controllers.AccountController",
+    "Method": "RequestPassword",
+    "RelativePath": "api/Account/SendCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GeorgeShop.DAL.DTO.Request.ForgetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GeorgeShop.PL.Controllers.CategoriesController",
     "Method": "Create",
     "RelativePath": "api/Categories",
