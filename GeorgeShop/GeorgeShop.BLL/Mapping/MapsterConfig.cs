@@ -21,7 +21,17 @@ namespace GeorgeShop.BLL.Mapping
                 .Where(t => t.Language == CultureInfo.CurrentCulture.Name).Select(t=> t.Name).FirstOrDefault()
                 );
 
-            
+
+
+            TypeAdapterConfig<Product, ProductResponse>.NewConfig()
+             .Map(dest => dest.UserCreated, source => source.CreatedBy.UserName)
+             .Map(dest => dest.Name, source => source.Translations
+             .Where(t => t.Language == CultureInfo.CurrentCulture.Name)
+                .Select(t => t.Name).FirstOrDefault()
+             ).Map(dest => dest.MainImage, source => $"https://localhost:7053/images/{source.MainImage}");
+
+
+
         }
     }
 }

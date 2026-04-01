@@ -18,6 +18,7 @@ namespace GeorgeShop.BLL.Service
 
                 var filePath = Path.Combine(
                     Directory.GetCurrentDirectory(),
+                    "wwwroot",
                     "Images" , 
                     fileName
                     );
@@ -31,6 +32,16 @@ namespace GeorgeShop.BLL.Service
             }
 
             return null;
+        }
+
+        public void Delete(String fileName)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(),
+                "wwwroot",
+                "images",
+                fileName);
+
+            if(File.Exists(path)) File.Delete(path);
         }
     }
 }

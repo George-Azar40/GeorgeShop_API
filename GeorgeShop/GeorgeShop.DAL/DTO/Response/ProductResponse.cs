@@ -11,6 +11,8 @@ namespace GeorgeShop.DAL.DTO.Response
         public int Id { get; set; }
         public string UserCreated {  get; set; }
         public string Name  { get; set; }
+        public decimal Price { get; set; }
+        public string CreatedBy { get; set; }
         public string MainImage { get; set; }
     }
 }

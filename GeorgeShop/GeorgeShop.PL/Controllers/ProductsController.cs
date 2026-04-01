@@ -1,0 +1,81 @@
+﻿using GeorgeShop.BLL.Service;
+using GeorgeShop.DAL.DTO.Request;
+using GeorgeShop.PL.Resources;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Migrations.Internal;
+using Microsoft.Extensions.Localization;
+
+namespace GeorgeShop.PL.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProductsController : ControllerBase
+    {
+
+        private readonly IProductService _productService;
+        private readonly IStringLocalizer<SharedResources> _localizer;
+        public ProductsController(IProductService productService, IStringLocalizer<SharedResources>  localizer)
+        {
+            _localizer = localizer;
+            _productService = productService;
+        }
+
+
+
+        [HttpGet("")]
+        [Authorize]
+        public async Task<IActionResult> Index()
+        {
+            var products = await _productService.GetAllProductsAsync();
+            return Ok(new
+            {
+                data = products
+            });
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Index(int id)
+        {
+            var product = await _productService.GetProduct(p=>p.Id ==  id);
+
+            if(product == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new
+            {
+                data = product
+            });
+
+
+        }
+
+
+        [HttpPost("")]
+        [Authorize]
+        public async Task<IActionResult> Create([FromForm] ProductRequest request , CancellationToken cancellationToken)
+        {
+            await _productService.CreateProduct(request ,  cancellationToken);
+            return Ok();
+        }
+
+
+        [HttpDelete("{id}")]
+        [Authorize]
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _productService.DeleteProductAsync(id);
+            if(!deleted)    return BadRequest();
+            return Ok();
+        }
+        
+
+
+
+    }
+}

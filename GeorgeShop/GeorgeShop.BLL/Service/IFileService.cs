@@ -10,5 +10,6 @@ namespace GeorgeShop.BLL.Service
     public interface IFileService
     {
         Task<string?> UploadAsync(IFormFile file);
+        void Delete(String fileName);
     }
 }

@@ -94,6 +94,11 @@ namespace GeorgeShop.PL
 
             builder.Services.AddTransient<IEmailSender, EmailSender>();
 
+
+            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IProductService ,  ProductService>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
             //define JWT
             builder.Services.AddAuthentication(options =>
             {
@@ -133,9 +138,12 @@ namespace GeorgeShop.PL
             }
 
 
+
             app.UseCors(MyAllowSpecificOrigins);
 
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 

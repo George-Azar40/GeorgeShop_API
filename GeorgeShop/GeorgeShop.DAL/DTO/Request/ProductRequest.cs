@@ -16,6 +16,7 @@ namespace GeorgeShop.DAL.DTO.Request
         public IFormFile MainImage  { get; set; }
         public List<ProductTranslationRequest> Translations { get; set; }
 
+
         public int CategoryId   { get; set; } 
 
     }
