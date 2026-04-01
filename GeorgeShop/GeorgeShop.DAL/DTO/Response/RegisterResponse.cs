@@ -10,5 +10,6 @@ namespace GeorgeShop.DAL.DTO.Response
     {
         public string Message   { get; set; }
         public bool Success { get; set; }
+        public List<string>? Errors { get; set; }
     }
 }

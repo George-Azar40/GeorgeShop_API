@@ -41,7 +41,8 @@ namespace GeorgeShop.BLL.Service
         {
             var categories = await _categoryRepository.GetAllAsync(new string[]
             {
-                nameof(Category.Translations)
+                nameof(Category.Translations) ,
+                nameof(Category.CreatedBy)
             });
             return categories.Adapt<List<CategoryResponse>>();
         }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace GeorgeShop.DAL.DTO.Response
 {
-    public class CategoryResponse
+    public class ProductResponse
     {
-        public int Category_id { get; set; }
+        public int Id { get; set; }
         public string UserCreated {  get; set; }
-        //public List<CategoryTranslationResponse> Translations { get; set; } 
-        public string Name { get; set; }
+        public string Name  { get; set; }
+        public string MainImage { get; set; }
     }
 }

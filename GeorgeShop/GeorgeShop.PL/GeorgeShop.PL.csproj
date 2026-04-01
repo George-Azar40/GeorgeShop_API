@@ -20,4 +20,8 @@
     <ProjectReference Include="..\GeorgeShop.BLL\GeorgeShop.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
 </Project>

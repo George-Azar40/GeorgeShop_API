@@ -1,4 +1,5 @@
 
+using GeorgeShop.BLL.Mapping;
 using GeorgeShop.BLL.Service;
 using GeorgeShop.DAL.Data;
 using GeorgeShop.DAL.Models;
@@ -113,6 +114,8 @@ namespace GeorgeShop.PL
                             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
                         };
                     });
+
+            MapsterConfig.MapsterConfigRegister();
 
             var app = builder.Build();
 
