@@ -98,6 +98,8 @@ namespace GeorgeShop.PL
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IProductService ,  ProductService>();
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IBrandService, BrandService>();
+            builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 
             //define JWT
             builder.Services.AddAuthentication(options =>

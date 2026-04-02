@@ -20,6 +20,9 @@ namespace GeorgeShop.DAL.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTranslation> ProductTranslations { get; set; }
 
+        //ApplicationDbContext
+        public DbSet<Brand> Brands { get; set; }
+
 
         private readonly IHttpContextAccessor _HttpContextAccessor;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,

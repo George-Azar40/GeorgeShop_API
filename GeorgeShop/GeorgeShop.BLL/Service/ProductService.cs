@@ -42,7 +42,8 @@ namespace GeorgeShop.BLL.Service
             var product = await _productRepository.GetAllAsync(new string[]
             {
                 nameof(Product.Translations),
-                nameof(Product.CreatedBy)
+                nameof(Product.CreatedBy),
+                nameof(Product.Brand)
             });
             return product.Adapt<List<ProductResponse>>();
         }
