@@ -37,6 +37,46 @@ namespace GeorgeShop.PL.Controllers
             });
         }
 
+        [HttpGet("")]
+        public async Task<IActionResult> GetAllBrands()
+        {
+            var brands =await _brandService.GetAllBrands();
+            return Ok(new
+            {
+                data = brands
+            });
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var brand = await _brandService.GetBrand(b=>b.Id == id);
+
+            if(brand == null)
+            {
+                return NotFound();
+            }
+            return Ok(new
+            {
+                data = brand
+            });
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted =await _brandService.DeleteBrandAsync(id);
+            if(deleted == null)
+            {
+                return NotFound();
+            }
+            return Ok(new
+            {
+                DeletedBrand = deleted
+            });
+        }
+
         
     }
 }

@@ -8,7 +8,8 @@ namespace GeorgeShop.DAL.DTO.Response
 {
     public class BrandResponse
     {
-        public string Message { get; set; }
-        public bool Success { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string BrandImage { get; set; }
     }
 }

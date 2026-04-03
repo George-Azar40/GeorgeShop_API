@@ -50,8 +50,6 @@ namespace GeorgeShop.PL.Controllers
             {
                 data = product
             });
-
-
         }
 
 

@@ -13,6 +13,7 @@ namespace GeorgeShop.DAL.DTO.Response
         public string Name  { get; set; }
         public decimal Price { get; set; }
         public string CreatedBy { get; set; }
+        //ProductResponse
         public string BrandName { get; set; }
         public string BrandImage { get; set; }
         public string MainImage { get; set; }

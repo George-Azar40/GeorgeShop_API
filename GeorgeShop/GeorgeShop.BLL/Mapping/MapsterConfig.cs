@@ -29,6 +29,8 @@ namespace GeorgeShop.BLL.Mapping
              .Where(t => t.Language == CultureInfo.CurrentCulture.Name)
                 .Select(t => t.Name).FirstOrDefault()
              ).Map(dest => dest.MainImage, source => $"https://localhost:7053/images/{source.MainImage}")
+
+             //Mapping/MapsterCongig
              .Map(dest => dest.BrandName, source => source.Brand.Name)
              .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.Brand.BrandImage}");
 

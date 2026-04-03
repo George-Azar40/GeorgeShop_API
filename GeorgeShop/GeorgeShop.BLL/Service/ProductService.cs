@@ -43,6 +43,8 @@ namespace GeorgeShop.BLL.Service
             {
                 nameof(Product.Translations),
                 nameof(Product.CreatedBy),
+
+                //ProductService -> GetAllProductAsync
                 nameof(Product.Brand)
             });
             return product.Adapt<List<ProductResponse>>();

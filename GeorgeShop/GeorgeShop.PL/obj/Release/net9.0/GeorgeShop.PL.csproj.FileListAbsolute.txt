@@ -181,3 +181,4 @@ C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\obj\Release\net9.0\GeorgeShop.PL.pdb
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\obj\Release\net9.0\GeorgeShop.PL.genruntimeconfig.cache
 C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\obj\Release\net9.0\ref\GeorgeShop.PL.dll
+C:\Users\CRC\Desktop\george\Back-end\API\API Final Project\GeorgeShop\GeorgeShop.PL\bin\Release\net9.0\GeorgeShop.PL.staticwebassets.runtime.json

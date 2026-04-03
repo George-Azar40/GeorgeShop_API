@@ -7,6 +7,7 @@ using Mapster;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,7 @@ namespace GeorgeShop.BLL.Service
         {
             var brand = request.Adapt<Brand>();
 
+            //BrandService
             if(request.BrandImage != null)
             {
                 var imagePath = await _fileService.UploadAsync(request.BrandImage);
@@ -34,6 +36,35 @@ namespace GeorgeShop.BLL.Service
             }
 
             await _brandRepository.CreateBrandAsync(brand);
+            return brand.Adapt<BrandResponse>();
+        }
+
+        public async Task<List<BrandResponse>> GetAllBrands()
+        {
+            var brands = await _brandRepository.GetAllAsync([]);
+            return brands.Adapt<List<BrandResponse>>();
+        }
+
+        public async Task<BrandResponse> GetBrand(Expression<Func<Brand, bool>> filter)
+        {
+            var brand = await _brandRepository.GetOne(filter , []);
+            if(brand == null)
+            {
+                return null;
+            }
+            return brand.Adapt<BrandResponse>() ;
+        }
+
+        public async Task<BrandResponse?> DeleteBrandAsync(int id)
+        {
+            var brand = await _brandRepository.GetOne(b=>b.Id == id);
+            if(brand == null)
+            {
+                return null ;
+            }
+            _fileService.Delete(brand.BrandImage);
+            _brandRepository.DeleteAsync(brand);
+
             return brand.Adapt<BrandResponse>();
         }
 
