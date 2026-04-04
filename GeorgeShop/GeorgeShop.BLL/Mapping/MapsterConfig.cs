@@ -34,7 +34,9 @@ namespace GeorgeShop.BLL.Mapping
              .Map(dest => dest.BrandName, source => source.Brand.Name)
              .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.Brand.BrandImage}");
 
-               
+
+            TypeAdapterConfig<Brand, BrandResponse>.NewConfig()
+                .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.BrandImage}");
 
 
 
