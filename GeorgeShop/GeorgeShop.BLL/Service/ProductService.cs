@@ -75,6 +75,33 @@ namespace GeorgeShop.BLL.Service
             return await _productRepository.DeleteAsync(product);
         }
 
-        
+
+        public async Task<bool> UpdateProduct(int id, ProductUpdateRequest request)
+        {
+            var product = await _productRepository.GetOne(p => p.Id == id, new string[]
+            {
+                nameof(Product.Translations),
+            });
+
+            if(product == null) return false;
+
+            request.Adapt(product);
+
+            var oldImage = product.MainImage;
+            if(request.MainImage != null)
+            {
+                _fileService.Delete(oldImage);
+                product.MainImage = await _fileService.UploadAsync(request.MainImage);
+            }
+            else
+            {
+                product.MainImage = oldImage;
+            }
+
+            return await _productRepository.UpdateAsync(product);
+            
+        }
+
+
     }
 }

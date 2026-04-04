@@ -17,5 +17,6 @@ namespace GeorgeShop.BLL.Service
         Task<List<ProductResponse>> GetAllProductsAsync();
         Task<ProductResponse?> GetProduct(Expression<Func<Product, bool>> filter);
         Task<bool> DeleteProductAsync(int id);
+        Task<bool> UpdateProduct(int id, ProductUpdateRequest request);
     }
 }

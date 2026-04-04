@@ -1,4 +1,5 @@
-﻿using GeorgeShop.DAL.DTO.Response;
+﻿using GeorgeShop.DAL.DTO.Request;
+using GeorgeShop.DAL.DTO.Response;
 using GeorgeShop.DAL.Models;
 using Mapster;
 using System;
@@ -34,6 +35,9 @@ namespace GeorgeShop.BLL.Mapping
              .Map(dest => dest.BrandName, source => source.Brand.Name)
              .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.Brand.BrandImage}");
 
+
+            TypeAdapterConfig<ProductUpdateRequest, Product>.NewConfig()
+                .IgnoreNullValues(true);
 
             TypeAdapterConfig<Brand, BrandResponse>.NewConfig()
                 .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.BrandImage}");
