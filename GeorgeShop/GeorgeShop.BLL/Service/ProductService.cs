@@ -55,7 +55,8 @@ namespace GeorgeShop.BLL.Service
             var product = await _productRepository.GetOne(filter, new string[]
             {
                 nameof(Product.Translations),
-                nameof(Product.CreatedBy)
+                nameof(Product.CreatedBy),
+                nameof(Product.Brand)
             });
 
             if(product == null)
