@@ -41,7 +41,7 @@ namespace GeorgeShop.BLL.Service
 
         public async Task<List<BrandResponse>> GetAllBrands()
         {
-            var brands = await _brandRepository.GetAllAsync([]);
+            var brands = await _brandRepository.GetAllAsync();
             return brands.Adapt<List<BrandResponse>>();
         }
 

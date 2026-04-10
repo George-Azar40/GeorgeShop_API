@@ -10,7 +10,7 @@ namespace GeorgeShop.DAL.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<List<T>> GetAllAsync(string[]? strings);
+        Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter = null,string[]? includes = null);
         Task<T> CreateAsync(T category , CancellationToken cancellationToken);
         Task<T?> GetOne(Expression<Func<T, bool>> filter, string[]? includes = null);
         Task<bool> DeleteAsync(T entity);

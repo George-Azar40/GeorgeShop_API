@@ -35,9 +35,14 @@ namespace GeorgeShop.DAL.Repository
 
         
 
-        public async Task<List<T>> GetAllAsync(string[]? includes = null)
+        public async Task<List<T>> GetAllAsync(
+            Expression<Func<T, bool>> filter = null,
+            string[]? includes = null)
         {
             IQueryable<T> querry = _context.Set<T>();
+            if(filter != null)
+                querry = querry.Where(filter);
+
             if(includes != null)
             {
                 foreach(var include in includes)

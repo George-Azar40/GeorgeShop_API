@@ -80,6 +80,15 @@ namespace GeorgeShop.PL.Controllers
             if(!updated) return BadRequest();
             return Ok();
         }
+
+        [HttpPatch("{id}/status")]
+        [Authorize]
+        public async Task<IActionResult> ChangeStatus(int id)
+        {
+            var updated = await _productService.ToogleStatus(id);
+            if (!updated) return BadRequest();
+            return Ok();
+        }
         
 
 

@@ -39,7 +39,9 @@ namespace GeorgeShop.BLL.Service
 
         public async Task<List<ProductResponse>> GetAllProductsAsync()
         {
-            var product = await _productRepository.GetAllAsync(new string[]
+            var product = await _productRepository.GetAllAsync(
+                p=> p.Status == EntityStatus.Active
+                ,new string[]
             {
                 nameof(Product.Translations),
                 nameof(Product.CreatedBy),
@@ -101,6 +103,18 @@ namespace GeorgeShop.BLL.Service
 
             return await _productRepository.UpdateAsync(product);
             
+        }
+
+        public async Task<bool> ToogleStatus(int id)
+        {
+            var product = await _productRepository.GetOne(p=>p.Id==id);
+            if(product == null) return false;
+
+            product.Status = product.Status == EntityStatus.Active ?
+                EntityStatus.Inactive : EntityStatus.Active;
+
+            return await _productRepository.UpdateAsync(product);
+
         }
 
 
