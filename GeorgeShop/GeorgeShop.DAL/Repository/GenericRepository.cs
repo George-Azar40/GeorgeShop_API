@@ -33,8 +33,7 @@ namespace GeorgeShop.DAL.Repository
             return affected > 0;
         }
 
-        
-
+       
         public async Task<List<T>> GetAllAsync(
             Expression<Func<T, bool>> filter = null,
             string[]? includes = null)
@@ -76,6 +75,14 @@ namespace GeorgeShop.DAL.Repository
 
             return effected > 0;
         }
+
+        public async Task<bool> DeleteRangeAsync(List<T> entities)
+        {
+            _context.RemoveRange(entities);
+            return await _context.SaveChangesAsync() > 0;
+
+        }
+
 
 
     }

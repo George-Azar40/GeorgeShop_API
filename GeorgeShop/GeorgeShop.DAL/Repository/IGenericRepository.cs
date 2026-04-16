@@ -18,5 +18,7 @@ namespace GeorgeShop.DAL.Repository
 
         Task<bool> UpdateAsync(T entity);
 
+        Task<bool> DeleteRangeAsync(List<T> entities);
+
     }
 }

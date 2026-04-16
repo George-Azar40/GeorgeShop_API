@@ -164,6 +164,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GeorgeShop.PL.Controllers.CartsController",
+    "Method": "GetCart",
+    "RelativePath": "api/Carts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeorgeShop.PL.Controllers.CartsController",
+    "Method": "RemoveItem",
+    "RelativePath": "api/Carts/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeorgeShop.PL.Controllers.CartsController",
+    "Method": "UpdateQuantity",
+    "RelativePath": "api/Carts/productId",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "GeorgeShop.DAL.DTO.Request.UpdateCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GeorgeShop.PL.Controllers.CategoriesController",
     "Method": "Create",
     "RelativePath": "api/Categories",
