@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeorgeShop.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260401130452_Product")]
-    partial class Product
+    [Migration("20260416123049_initia")]
+    partial class initia
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,6 +106,27 @@ namespace GeorgeShop.DAL.Migrations
                     b.ToTable("Users", (string)null);
                 });
 
+            modelBuilder.Entity("GeorgeShop.DAL.Models.Brand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("BrandImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brands");
+                });
+
             modelBuilder.Entity("GeorgeShop.DAL.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -120,6 +141,9 @@ namespace GeorgeShop.DAL.Migrations
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("UpdatedById")
                         .HasColumnType("nvarchar(450)");
@@ -170,6 +194,9 @@ namespace GeorgeShop.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
@@ -196,6 +223,9 @@ namespace GeorgeShop.DAL.Migrations
                     b.Property<double>("Rate")
                         .HasColumnType("float");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("UpdatedById")
                         .HasColumnType("nvarchar(450)");
 
@@ -203,6 +233,8 @@ namespace GeorgeShop.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
 
@@ -406,6 +438,12 @@ namespace GeorgeShop.DAL.Migrations
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Product", b =>
                 {
+                    b.HasOne("GeorgeShop.DAL.Models.Brand", "Brand")
+                        .WithMany("Product")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("GeorgeShop.DAL.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
@@ -421,6 +459,8 @@ namespace GeorgeShop.DAL.Migrations
                     b.HasOne("GeorgeShop.DAL.Models.ApplicationUser", "UpdatedBy")
                         .WithMany()
                         .HasForeignKey("UpdatedById");
+
+                    b.Navigation("Brand");
 
                     b.Navigation("Category");
 
@@ -489,6 +529,11 @@ namespace GeorgeShop.DAL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("GeorgeShop.DAL.Models.Brand", b =>
+                {
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Category", b =>

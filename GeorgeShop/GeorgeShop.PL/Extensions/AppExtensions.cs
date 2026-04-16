@@ -8,6 +8,7 @@ namespace GeorgeShop.PL.Extensions
         {
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
             
+            
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -18,6 +19,7 @@ namespace GeorgeShop.PL.Extensions
             app.UseCors(MyAllowSpecificOrigins);
 
             app.UseHttpsRedirection();
+            
 
             app.UseStaticFiles();
 

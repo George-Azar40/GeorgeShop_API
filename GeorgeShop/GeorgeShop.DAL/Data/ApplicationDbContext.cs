@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace GeorgeShop.DAL.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTranslation> ProductTranslations { get; set; }
+        public DbSet<Cart> carts { get; set; }
 
         //ApplicationDbContext
         public DbSet<Brand> Brands { get; set; }
@@ -39,8 +41,9 @@ namespace GeorgeShop.DAL.Data
             builder.Entity<ApplicationUser>().ToTable("Users");
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
+            
 
-
+           
 
             builder.Entity<Category>()
                 .HasOne(p => p.CreatedBy)

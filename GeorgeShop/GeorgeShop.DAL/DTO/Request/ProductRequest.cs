@@ -12,7 +12,7 @@ namespace GeorgeShop.DAL.DTO.Request
         public decimal Price { get; set; }
         public decimal Discount { get; set; }
 
-        public int Qunatity { get; set; }
+        public int Quantity { get; set; }
         public IFormFile MainImage  { get; set; }
         public List<ProductTranslationRequest> Translations { get; set; }
         //ProductRequest

@@ -124,6 +124,22 @@ namespace GeorgeShop.DAL.Migrations
                     b.ToTable("Brands");
                 });
 
+            modelBuilder.Entity("GeorgeShop.DAL.Models.Cart", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "UserId");
+
+                    b.ToTable("carts");
+                });
+
             modelBuilder.Entity("GeorgeShop.DAL.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -403,6 +419,17 @@ namespace GeorgeShop.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("GeorgeShop.DAL.Models.Cart", b =>
+                {
+                    b.HasOne("GeorgeShop.DAL.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Category", b =>

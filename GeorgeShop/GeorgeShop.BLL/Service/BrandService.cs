@@ -1,6 +1,5 @@
 ﻿using GeorgeShop.DAL.DTO.Request;
 using GeorgeShop.DAL.DTO.Response;
-using GeorgeShop.DAL.Migrations;
 using GeorgeShop.DAL.Models;
 using GeorgeShop.DAL.Repository;
 using Mapster;

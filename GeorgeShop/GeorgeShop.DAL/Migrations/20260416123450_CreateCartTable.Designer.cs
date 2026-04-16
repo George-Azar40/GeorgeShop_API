@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeorgeShop.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260402084143_addColumns")]
-    partial class addColumns
+    [Migration("20260416123450_CreateCartTable")]
+    partial class CreateCartTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -127,35 +127,20 @@ namespace GeorgeShop.DAL.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("GeorgeShop.DAL.Models.BrandList", b =>
+            modelBuilder.Entity("GeorgeShop.DAL.Models.Cart", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("BrandId")
+                    b.Property<int>("Count")
                         .HasColumnType("int");
 
-                    b.Property<string>("BrandImage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("ProductId", "UserId");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BrandId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("BrandList");
+                    b.ToTable("carts");
                 });
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Category", b =>
@@ -172,6 +157,9 @@ namespace GeorgeShop.DAL.Migrations
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("UpdatedById")
                         .HasColumnType("nvarchar(450)");
@@ -222,7 +210,7 @@ namespace GeorgeShop.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("BrandId")
+                    b.Property<int>("BrandId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
@@ -250,6 +238,9 @@ namespace GeorgeShop.DAL.Migrations
 
                     b.Property<double>("Rate")
                         .HasColumnType("float");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("UpdatedById")
                         .HasColumnType("nvarchar(450)");
@@ -433,15 +424,15 @@ namespace GeorgeShop.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("GeorgeShop.DAL.Models.BrandList", b =>
+            modelBuilder.Entity("GeorgeShop.DAL.Models.Cart", b =>
                 {
-                    b.HasOne("GeorgeShop.DAL.Models.Brand", null)
-                        .WithMany("Brands")
-                        .HasForeignKey("BrandId");
+                    b.HasOne("GeorgeShop.DAL.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("GeorgeShop.DAL.Models.Product", null)
-                        .WithMany("Brands")
-                        .HasForeignKey("ProductId");
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Category", b =>
@@ -474,9 +465,11 @@ namespace GeorgeShop.DAL.Migrations
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Product", b =>
                 {
-                    b.HasOne("GeorgeShop.DAL.Models.Brand", null)
+                    b.HasOne("GeorgeShop.DAL.Models.Brand", "Brand")
                         .WithMany("Product")
-                        .HasForeignKey("BrandId");
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GeorgeShop.DAL.Models.Category", "Category")
                         .WithMany("Products")
@@ -493,6 +486,8 @@ namespace GeorgeShop.DAL.Migrations
                     b.HasOne("GeorgeShop.DAL.Models.ApplicationUser", "UpdatedBy")
                         .WithMany()
                         .HasForeignKey("UpdatedById");
+
+                    b.Navigation("Brand");
 
                     b.Navigation("Category");
 
@@ -565,8 +560,6 @@ namespace GeorgeShop.DAL.Migrations
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Brand", b =>
                 {
-                    b.Navigation("Brands");
-
                     b.Navigation("Product");
                 });
 
@@ -579,8 +572,6 @@ namespace GeorgeShop.DAL.Migrations
 
             modelBuilder.Entity("GeorgeShop.DAL.Models.Product", b =>
                 {
-                    b.Navigation("Brands");
-
                     b.Navigation("Translations");
                 });
 #pragma warning restore 612, 618

@@ -148,6 +148,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GeorgeShop.PL.Controllers.CartsController",
+    "Method": "AddToCart",
+    "RelativePath": "api/Carts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GeorgeShop.DAL.DTO.Request.AddToCartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GeorgeShop.PL.Controllers.CategoriesController",
     "Method": "Create",
     "RelativePath": "api/Categories",
@@ -250,7 +266,7 @@
         "IsRequired": false
       },
       {
-        "Name": "Qunatity",
+        "Name": "Quantity",
         "Type": "System.Int32",
         "IsRequired": false
       },

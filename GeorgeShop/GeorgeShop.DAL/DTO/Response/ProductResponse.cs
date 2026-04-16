@@ -12,6 +12,8 @@ namespace GeorgeShop.DAL.DTO.Response
         public string UserCreated {  get; set; }
         public string Name  { get; set; }
         public decimal Price { get; set; }
+        public int Quantity { get; set; }
+
         public string CreatedBy { get; set; }
         //ProductResponse
         public string BrandName { get; set; }
