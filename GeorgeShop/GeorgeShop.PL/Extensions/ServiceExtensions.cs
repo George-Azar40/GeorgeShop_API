@@ -1,12 +1,13 @@
 ﻿using GeorgeShop.BLL.Service;
 using GeorgeShop.DAL.Repository;
 using GeorgeShop.DAL.Utilities;
+using Stripe;
 
 namespace GeorgeShop.PL.Extensions
 {
     public static class ServiceExtensions
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration Configuration)
         {
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
@@ -18,9 +19,9 @@ namespace GeorgeShop.PL.Extensions
             
             services.AddTransient<IEmailSender, EmailSender>();
             
-            services.AddScoped<IFileService, FileService>();
+            services.AddScoped<IFileService, BLL.Service.FileService>();
             
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductService, BLL.Service.ProductService>();
             
             services.AddScoped<IProductRepository, ProductRepository>();
             
@@ -31,6 +32,9 @@ namespace GeorgeShop.PL.Extensions
             services.AddScoped<ICartRepository, CartRepository>();
             
             services.AddScoped<ICartService , CartService>();
+
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            StripeConfiguration.ApiKey = Configuration["Stripe:SecretKey"];
 
 
             return services;
