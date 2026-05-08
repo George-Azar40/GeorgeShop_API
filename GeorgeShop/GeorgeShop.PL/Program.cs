@@ -15,7 +15,7 @@ namespace GeorgeShop.PL
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             
             //Refactoring Long Program
-            builder.Services.AddApplicationServices();
+            builder.Services.AddApplicationServices(builder.Configuration);
             builder.Services.AddInfrastructure(builder.Configuration);
             builder.Services.AddPresentation();
 

@@ -32,9 +32,12 @@ namespace GeorgeShop.PL.Extensions
             services.AddScoped<ICartRepository, CartRepository>();
             
             services.AddScoped<ICartService , CartService>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
             StripeConfiguration.ApiKey = Configuration["Stripe:SecretKey"];
+
+            services.AddScoped<ICheckOutService, CheckOutService>();
 
 
             return services;

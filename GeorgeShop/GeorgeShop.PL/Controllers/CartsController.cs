@@ -60,7 +60,7 @@ namespace GeorgeShop.PL.Controllers
             return Ok();
         }
 
-        [HttpPatch("productId")]
+        [HttpPatch("{productId}")]
         public async Task<IActionResult> UpdateQuantity([FromRoute] int productId , [FromBody] UpdateCartRequest request)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);

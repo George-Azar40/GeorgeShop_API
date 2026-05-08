@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace GeorgeShop.DAL.DTO.Request
@@ -13,6 +14,8 @@ namespace GeorgeShop.DAL.DTO.Request
     }
     public class CheckoutRequest
     {
+
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PaymentMethod PaymentMethod {  get; set; }
         public string? City { get; set; }
         public string? Street { get; set; }

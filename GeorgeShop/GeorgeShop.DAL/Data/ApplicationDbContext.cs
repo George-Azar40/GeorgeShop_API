@@ -24,6 +24,8 @@ namespace GeorgeShop.DAL.Data
 
         //ApplicationDbContext
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Order > Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
 
         private readonly IHttpContextAccessor _HttpContextAccessor;
@@ -50,6 +52,18 @@ namespace GeorgeShop.DAL.Data
                 .WithMany()
                 .HasForeignKey(p => p.CreatedById)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<OrderItem>()
+            .HasOne(oi => oi.Product)
+            .WithMany()
+            .HasForeignKey(oi => oi.ProductId)
+            .OnDelete(DeleteBehavior.NoAction); 
+
+            builder.Entity<OrderItem>()
+            .HasOne(oi => oi.Order)
+            .WithMany(o => o.OrderItems)
+            .HasForeignKey(oi => oi.OrderId)
+            .OnDelete(DeleteBehavior.Cascade);
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
