@@ -11,5 +11,6 @@ namespace GeorgeShop.BLL.Service
     public interface ICheckOutService
     {
         Task<CheckoutResponse> ProcessCheckout(string userId,CheckoutRequest request,CancellationToken cancellation);
+        Task<CheckoutResponse> HandleSucess(string sessionId);
     }
 }

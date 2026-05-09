@@ -19,16 +19,25 @@ namespace GeorgeShop.BLL.Service
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IOrderRepository _orderRepository;
+        private readonly ICartService _cartService;
+        private readonly IProductRepository _productRepository;
+        private readonly IEmailSender _emailSender;
         public CheckOutService(ICartRepository cartRepository ,
             UserManager<ApplicationUser> userManager,
             IHttpContextAccessor httpContextAccessor,
-            IOrderRepository orderRepository
+            IOrderRepository orderRepository,
+            ICartService cartService,
+            IProductRepository productRepository,
+            IEmailSender emailSender
             ) 
         {
             _cartRepository = cartRepository;
             _userManager = userManager;
             _httpContextAccessor = httpContextAccessor;
             _orderRepository = orderRepository;
+            _cartService = cartService;
+            _productRepository = productRepository;
+            _emailSender = emailSender;
         }
         public async Task<CheckoutResponse> ProcessCheckout(string userId, CheckoutRequest request,CancellationToken cancellation)
         {
@@ -137,9 +146,8 @@ namespace GeorgeShop.BLL.Service
                     PaymentMethodTypes = new List<string> { "card" },
                     LineItems = new List<SessionLineItemOptions>(),
                     Mode = "payment",
-                    SuccessUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/checkout/success",
-                    CancelUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/checkout/cancel",
-
+                    SuccessUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/api/checkouts/success?sessionId={{CHECKOUT_SESSION_ID}}",
+                    CancelUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/api/checkouts/cancel",
                 };
 
 
@@ -164,6 +172,9 @@ namespace GeorgeShop.BLL.Service
 
                 var service = new SessionService();
                 var session = service.Create(options);
+                    order.StripeSessionId = session.Id;
+
+                await _orderRepository.UpdateAsync(order);
 
 
                 return new CheckoutResponse
@@ -178,6 +189,47 @@ namespace GeorgeShop.BLL.Service
             {
                 Success = false,
                 Error = "Invalid payment method"
+            };
+        }
+
+        public async Task<CheckoutResponse> HandleSucess(string sessionId)
+        {
+            var order = await _orderRepository.GetOne(
+                o => o.StripeSessionId == sessionId,
+                includes: new[]
+                {
+                    nameof(Order.OrderItems),
+                    $"{nameof(Order.OrderItems)}.{nameof(OrderItem.Product)}",
+                    $"{nameof(Order.OrderItems)}.{nameof(OrderItem.Product)}.{nameof(Product.Translations)}",
+                }
+                );
+
+            order.OrderStatus = OrderStatusEnum.Paid;
+            await _orderRepository.UpdateAsync(order);
+
+            await _cartService.ClearCart(order.UserId);
+
+            var user = await _userManager.FindByIdAsync(order.UserId);
+            await _emailSender.SendEmailAsync(user.Email, "order Confirmed", "<h2> Your order has been places successfully</h2>");
+
+            var LowStockProducts = await _productRepository.DecreaseQuantityAsync(order.OrderItems);
+
+            foreach (var item in LowStockProducts)
+            {
+                if (LowStockProducts != null)
+                {
+                    await _emailSender.SendEmailAsync("georgeazar456@gmail.com", "Low Stock Alert",
+                            $"<h2>Current Quantity is : {item.Quantity} -- for this Product : " +
+                            $"{item.Translations.FirstOrDefault(e => e.Language == "en").Name}</h2>");
+
+                }
+            }
+            
+
+            return new CheckoutResponse()
+            {
+                Success = true,
+                OrderId = order.Id
             };
         }
     }

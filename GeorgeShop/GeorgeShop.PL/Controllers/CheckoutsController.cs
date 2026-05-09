@@ -31,5 +31,16 @@ namespace GeorgeShop.PL.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet("sucess")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Sucess([FromQuery] string sessionId)
+        {
+            var result = await _checkoutService.HandleSucess(sessionId);
+            return Ok(new
+            {
+                message = "sucess"
+            });
+        }
     }
 }

@@ -301,6 +301,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GeorgeShop.PL.Controllers.CheckoutsController",
+    "Method": "Sucess",
+    "RelativePath": "api/Checkouts/sucess",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GeorgeShop.PL.Controllers.ProductsController",
     "Method": "Index",
     "RelativePath": "api/Products",

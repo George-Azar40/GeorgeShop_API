@@ -82,7 +82,12 @@ namespace GeorgeShop.DAL.Repository
             return await _context.SaveChangesAsync() > 0;
 
         }
+        public async Task<bool> UpdateRangeAsync(List<T> entities)
+        {
+            _context.UpdateRange(entities);
+            return await _context.SaveChangesAsync() > 0;
 
+        }
 
 
     }
