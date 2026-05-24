@@ -1,5 +1,6 @@
 ﻿using GeorgeShop.DAL.DTO.Request;
 using GeorgeShop.DAL.DTO.Response;
+using GeorgeShop.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace GeorgeShop.BLL.Service
         Task<bool> confirmEmailAsync(string token, string id);
         Task<ForgetPasswordResponse> RequestPasswordResetAsync(ForgetPasswordRequest request);
         Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordRequest request);
+        Task<LoginResponse> RefreshTokenAsync();
 
 
     }

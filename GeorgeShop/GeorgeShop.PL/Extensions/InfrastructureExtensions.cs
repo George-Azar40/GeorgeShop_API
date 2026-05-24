@@ -26,7 +26,7 @@ namespace GeorgeShop.PL.Extensions
                 options.Password.RequireUppercase = true; // A-Z
                 options.Password.RequireNonAlphanumeric = true; // ! @ $ # * %
                 options.Password.RequiredLength = 10; // minimun pass length => 10 letter
-
+                
                 options.Lockout.MaxFailedAccessAttempts = 5; // lock user if failed 5 times
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5); // block for 5 minutes
 
@@ -49,6 +49,7 @@ namespace GeorgeShop.PL.Extensions
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
+                        ClockSkew = TimeSpan.Zero,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = config["Jwt:Issuer"],
                         ValidAudience = config["Jwt:Audience"],

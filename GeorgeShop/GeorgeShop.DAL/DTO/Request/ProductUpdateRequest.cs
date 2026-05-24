@@ -14,6 +14,8 @@ namespace GeorgeShop.DAL.DTO.Request
 
         public int? Qunatity { get; set; }
         public IFormFile? MainImage { get; set; }
+        public List<IFormFile>? SubImages { get; set; }
+        public List<IFormFile>? newImages { get; set; }
         public List<ProductTranslationRequest>? Translations { get; set; }
         //ProductRequest
         public int? BrandId { get; set; }

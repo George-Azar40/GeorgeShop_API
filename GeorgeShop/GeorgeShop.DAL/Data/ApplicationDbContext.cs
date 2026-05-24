@@ -26,6 +26,7 @@ namespace GeorgeShop.DAL.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Order > Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
 
 
         private readonly IHttpContextAccessor _HttpContextAccessor;

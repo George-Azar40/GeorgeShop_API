@@ -5,6 +5,7 @@ using Mapster;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -101,6 +102,9 @@ namespace GeorgeShop.BLL.Service
                     Success = false
                 };
             }
+
+            var refreshToken = await GenerateRefreshToken(user);
+            SetRefreshTokenCookies(refreshToken);
 
             return new LoginResponse()
             {
@@ -231,6 +235,54 @@ namespace GeorgeShop.BLL.Service
                 Message = "Password Reset Success",
                 Success = true
             };
-        } 
+        }
+
+        private async Task<string> GenerateRefreshToken(ApplicationUser user)
+        {
+            var refreshToken = Guid.NewGuid().ToString();
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(15);  // this in database
+            await _userManager.UpdateAsync(user);
+            return refreshToken;
+        }
+        private void SetRefreshTokenCookies(string refreshToken)
+        {
+            _httpContextAccessor.HttpContext.Response.Cookies
+                .Append("refreshToken", refreshToken, new CookieOptions
+                {
+                    HttpOnly = true, // Veryyyy Importanttt
+                    Secure = false, // when publish should be true for Production
+                    SameSite = SameSiteMode.None, // don't accept any request not from my site => replace None with Strict
+                    Expires = DateTime.UtcNow.AddDays(15) //this in browser
+                });
+        }
+        
+        public async Task<LoginResponse> RefreshTokenAsync()
+        {
+            var refreshToken = _httpContextAccessor.HttpContext.Request.Cookies["refreshToken"];
+            if (refreshToken == null) return new LoginResponse
+            {
+                Success = false,
+                Message = "No Refresh Token"
+            };
+
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+            if(user.RefreshTokenExpiry < DateTime.UtcNow)
+            {
+                return new LoginResponse
+                {
+                    Success = false,
+                    Message = "Refresh Token Expired"
+                };
+            }
+            var newRefreshToken = await GenerateRefreshToken(user);
+            SetRefreshTokenCookies(newRefreshToken);
+            return new LoginResponse
+            {
+                Message = "SUccess",
+                Success = true,
+                AccessToken = await GenerateRefreshToken(user)
+            };
+        }
     }
 }

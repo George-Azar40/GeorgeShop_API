@@ -31,6 +31,17 @@ namespace GeorgeShop.BLL.Service
                 var imagePath = await _fileService.UploadAsync(request.MainImage);
                 product.MainImage = imagePath;
             }
+            if(request.SubImages != null)
+            {
+                foreach(var image in request.SubImages)
+                {
+                    var imagePath = await _fileService.UploadAsync(image);
+                    product.Images.Add(new ProductImage
+                    {
+                        ImagePath = imagePath
+                    });
+                }
+            }
 
             await Task.Delay(5000, cancellationToken);
             await _productRepository.CreateAsync(product , cancellationToken);
@@ -40,11 +51,12 @@ namespace GeorgeShop.BLL.Service
         public async Task<List<ProductResponse>> GetAllProductsAsync()
         {
             var product = await _productRepository.GetAllAsync(
-                p=> p.Status == EntityStatus.Active
-                ,new string[]
+                p => p.Status == EntityStatus.Active
+                , new string[]
             {
                 nameof(Product.Translations),
                 nameof(Product.CreatedBy),
+                nameof(Product.Images),
 
                 //ProductService -> GetAllProductAsync
                 nameof(Product.Brand)
@@ -71,9 +83,17 @@ namespace GeorgeShop.BLL.Service
 
         public async Task<bool> DeleteProductAsync(int id)
         {
-            var product = await _productRepository.GetOne(p=>p.Id == id);
+            var product = await _productRepository.GetOne(
+                p=>p.Id == id ,
+                includes: new string[] { nameof(Product.Images) }
+                );
             if(product == null) return false;
             _fileService.Delete(product.MainImage);
+            
+            foreach(var image in product.Images)
+            {
+                _fileService.Delete(image.ImagePath);
+            }
 
             return await _productRepository.DeleteAsync(product);
         }
@@ -84,6 +104,7 @@ namespace GeorgeShop.BLL.Service
             var product = await _productRepository.GetOne(p => p.Id == id, new string[]
             {
                 nameof(Product.Translations),
+                nameof(Product.Images),
             });
 
             if(product == null) return false;
@@ -99,6 +120,35 @@ namespace GeorgeShop.BLL.Service
             else
             {
                 product.MainImage = oldImage;
+            }
+            
+            if(request.SubImages != null)
+            {
+                foreach(var image in product.Images)
+                {
+                    _fileService.Delete(image.ImagePath);
+                }
+                product.Images.Clear();
+                foreach(var image in request.SubImages)
+                {
+                    var imagePath = await _fileService.UploadAsync(image);
+                    product.Images.Add(new ProductImage
+                    {
+                        ImagePath = imagePath
+                    });
+                }
+            }
+
+            if(request.newImages != null)
+            {
+                foreach (var image in request.newImages)
+                {
+                    var imagePath = await _fileService.UploadAsync(image);
+                    product.Images.Add(new ProductImage
+                    {
+                        ImagePath = imagePath
+                    });
+                }
             }
 
             return await _productRepository.UpdateAsync(product);

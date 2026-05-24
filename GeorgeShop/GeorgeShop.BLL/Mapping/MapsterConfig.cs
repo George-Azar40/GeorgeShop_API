@@ -33,7 +33,8 @@ namespace GeorgeShop.BLL.Mapping
 
              //Mapping/MapsterCongig
              .Map(dest => dest.BrandName, source => source.Brand.Name)
-             .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.Brand.BrandImage}");
+             .Map(dest => dest.BrandImage, source => $"https://localhost:7053/images/{source.Brand.BrandImage}")
+             .Map(dest => dest.SubImages, source => source.Images.Select(i => $"https://localhost:7053/images/{i.ImagePath}"));
 
 
             TypeAdapterConfig<ProductUpdateRequest, Product>.NewConfig()

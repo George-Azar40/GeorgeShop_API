@@ -19,5 +19,6 @@ namespace GeorgeShop.DAL.DTO.Response
         public string BrandName { get; set; }
         public string BrandImage { get; set; }
         public string MainImage { get; set; }
+        public List<String> SubImages { get; set; }
     }
 }

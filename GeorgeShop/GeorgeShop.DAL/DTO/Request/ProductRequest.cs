@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GeorgeShop.DAL.Models;
+using GeorgeShop.DAL.Validations;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,12 @@ namespace GeorgeShop.DAL.DTO.Request
         public decimal Discount { get; set; }
 
         public int Quantity { get; set; }
+        [AllowedExtensions]
+        [MaxFileSize(2)]
         public IFormFile MainImage  { get; set; }
+        public List<IFormFile>? SubImages { get; set; }
         public List<ProductTranslationRequest> Translations { get; set; }
+
         //ProductRequest
         public int BrandId { get; set; }
         public int CategoryId   { get; set; } 
