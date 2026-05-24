@@ -14,8 +14,9 @@ namespace GeorgeShop.BLL.Service
     {
         Task CreateProduct(ProductRequest request, CancellationToken cancellationToken);
 
-        Task<List<ProductResponse>> GetAllProductsAsync();
+        Task<PaginationResponse<ProductResponse>> GetAllProductsAsync(PaginationRequest request);
         Task<ProductResponse?> GetProduct(Expression<Func<Product, bool>> filter);
+
         Task<bool> DeleteProductAsync(int id);
         Task<bool> UpdateProduct(int id, ProductUpdateRequest request);
         Task<bool> ToogleStatus(int id);

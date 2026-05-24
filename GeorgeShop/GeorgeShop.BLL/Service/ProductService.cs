@@ -1,4 +1,5 @@
-﻿using GeorgeShop.DAL.DTO.Request;
+﻿using GeorgeShop.BLL.Extensions;
+using GeorgeShop.DAL.DTO.Request;
 using GeorgeShop.DAL.DTO.Response;
 using GeorgeShop.DAL.Models;
 using GeorgeShop.DAL.Repository;
@@ -48,9 +49,9 @@ namespace GeorgeShop.BLL.Service
         }
 
 
-        public async Task<List<ProductResponse>> GetAllProductsAsync()
+        public async Task<PaginationResponse<ProductResponse>> GetAllProductsAsync(PaginationRequest request)
         {
-            var product = await _productRepository.GetAllAsync(
+            var query = _productRepository.GetQueryable(
                 p => p.Status == EntityStatus.Active
                 , new string[]
             {
@@ -61,7 +62,15 @@ namespace GeorgeShop.BLL.Service
                 //ProductService -> GetAllProductAsync
                 nameof(Product.Brand)
             });
-            return product.Adapt<List<ProductResponse>>();
+
+            var paginated = await query.ToPaginationAsync(request.Page, request.Limit);
+            return new PaginationResponse<ProductResponse>
+            {
+                Data = paginated.Data.Adapt<List<ProductResponse>>(),
+                TotalCount = paginated.TotalCount,
+                Page = paginated.Page,
+                Limit = paginated.Limit
+            };
         }
 
         public async Task<ProductResponse?> GetProduct(Expression<Func<Product, bool>> filter)

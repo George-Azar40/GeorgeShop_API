@@ -33,8 +33,23 @@ namespace GeorgeShop.DAL.Repository
             return affected > 0;
         }
 
-       
-        public async Task<List<T>> GetAllAsync(
+
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter = null, string[]? includes = null)
+        {
+            IQueryable<T> querry = _context.Set<T>();
+            if (filter != null)
+                querry = querry.Where(filter);
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    querry = querry.Include(include);
+                }
+            }
+            return await querry.ToListAsync();
+        }
+        public IQueryable<T> GetQueryable(
             Expression<Func<T, bool>> filter = null,
             string[]? includes = null)
         {
@@ -49,7 +64,7 @@ namespace GeorgeShop.DAL.Repository
                     querry = querry.Include(include);
                 }
             }
-            return await querry.ToListAsync();
+            return querry;
         }
 
         public async Task<T?> GetOne(Expression<Func<T,bool>> filter,string[]? includes = null)
@@ -89,6 +104,6 @@ namespace GeorgeShop.DAL.Repository
 
         }
 
-
+        
     }
 }
