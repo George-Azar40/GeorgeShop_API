@@ -327,6 +327,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GeorgeShop.PL.Controllers.OrdersController",
+    "Method": "GetMyOrders",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GeorgeShop.PL.Controllers.ProductsController",
     "Method": "Index",
     "RelativePath": "api/Products",

@@ -33,6 +33,7 @@ namespace GeorgeShop.PL.Extensions
             
             services.AddScoped<ICartService , CartService>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderService, OrderService>(); 
 
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
             StripeConfiguration.ApiKey = Configuration["Stripe:SecretKey"];

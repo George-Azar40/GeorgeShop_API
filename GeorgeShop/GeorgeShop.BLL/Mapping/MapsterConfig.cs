@@ -53,6 +53,9 @@ namespace GeorgeShop.BLL.Mapping
 
                 ;
 
+
+            TypeAdapterConfig<OrderItem, OrderItemResponse>.NewConfig()
+                .Map(dest => dest.ProductName, source => source.Product.Translations.FirstOrDefault().Name);
         }
     }
 }
