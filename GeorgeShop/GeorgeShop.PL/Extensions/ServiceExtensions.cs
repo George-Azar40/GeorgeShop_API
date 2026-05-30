@@ -30,6 +30,7 @@ namespace GeorgeShop.PL.Extensions
             services.AddScoped<IBrandRepository, BrandRepository>();
             
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IUserManagmentService, UserManagmentService>();
             
             services.AddScoped<ICartService , CartService>();
             services.AddScoped<IOrderRepository, OrderRepository>();

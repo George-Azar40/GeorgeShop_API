@@ -95,6 +95,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GeorgeShop.PL.Controllers.UserManagmentController",
+    "Method": "changeRole",
+    "RelativePath": "api/admin/{userId}/role",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "GeorgeShop.DAL.DTO.Request.changeRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeorgeShop.PL.Controllers.UserManagmentController",
+    "Method": "GetUser",
+    "RelativePath": "api/admin/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeorgeShop.PL.Controllers.UserManagmentController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/admin/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GeorgeShop.PL.Controllers.BrandsController",
     "Method": "CreateBrandAsync",
     "RelativePath": "api/Brands",
