@@ -1,4 +1,6 @@
 ﻿using GeorgeShop.BLL.Service;
+using GeorgeShop.DAL.DTO.Request;
+using GeorgeShop.DAL.Models;
 using GeorgeShop.PL.Resources;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -32,6 +34,36 @@ namespace GeorgeShop.PL.Controllers
             {
                 data = orders,
             });
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUserOrder(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var order = await _orderService.GetUserOrder(userId,id);
+            return Ok(new
+            {
+                data = order ,
+            });
+        }
+
+        [HttpGet("admin")]
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllOrders([FromQuery] OrderStatusEnum status = OrderStatusEnum.Pending)
+        {
+            var orders = await _orderService.GetAllOrders(status);
+            return Ok(new
+            {
+                data = orders,
+            });
+        }
+        [HttpPatch("admin/{id}/status")]
+        public async Task<IActionResult> ChangeStatus(int id, [FromBody] ChangeOrderStatusRequest status)
+        {
+            var result = await _orderService.ChangeOrderStatus(id, status);
+            if(!result) return BadRequest();
+
+            return Ok();
         }
 
     }

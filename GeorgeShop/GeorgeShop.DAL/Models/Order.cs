@@ -13,8 +13,9 @@ namespace GeorgeShop.DAL.Models
         Approved = 2,
         Shipped = 3,
         Delivered = 4,
-        Cancelled = 5,
-        Paid = 6, 
+        Paid = 5,
+        Cancelled = 6,
+         
 
     }
     public class Order
