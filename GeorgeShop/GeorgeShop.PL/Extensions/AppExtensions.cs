@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using GeorgeShop.PL.Extensions.MiddleWare;
+using Microsoft.Extensions.Options;
 
 namespace GeorgeShop.PL.Extensions
 {
@@ -17,7 +18,7 @@ namespace GeorgeShop.PL.Extensions
 
             var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
             app.UseCors(MyAllowSpecificOrigins);
-
+            
             app.UseHttpsRedirection();
             
 
@@ -27,6 +28,9 @@ namespace GeorgeShop.PL.Extensions
 
 
             app.MapControllers();
+
+            app.UseMiddleware<GlobalExeptionHandling>();
+            app.UseCustomMiddle();
 
             return app;
         }
