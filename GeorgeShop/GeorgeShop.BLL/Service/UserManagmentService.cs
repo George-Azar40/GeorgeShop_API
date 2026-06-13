@@ -63,7 +63,7 @@ namespace GeorgeShop.BLL.Service
         {
             var user = await _userManager.FindByIdAsync(userId);
 
-            var IsBlocked = user.LockoutEnd > DateTime.UtcNow;
+            var IsBlocked = user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow;
             if (IsBlocked)
             {
                 await _userManager.SetLockoutEndDateAsync(user, null);

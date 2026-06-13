@@ -14,7 +14,7 @@ namespace GeorgeShop.BLL.Service
     {
         Task CreateProduct(ProductRequest request, CancellationToken cancellationToken);
 
-        Task<PaginationResponse<ProductResponse>> GetAllProductsAsync(PaginationRequest request);
+        Task<PaginationResponse<ProductResponse>> GetAllProductsAsync(ProductFilterRequest request);
         Task<ProductResponse?> GetProduct(Expression<Func<Product, bool>> filter);
 
         Task<bool> DeleteProductAsync(int id);

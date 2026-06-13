@@ -27,6 +27,7 @@ namespace GeorgeShop.DAL.Data
         public DbSet<Order > Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
 
         private readonly IHttpContextAccessor _HttpContextAccessor;
@@ -65,6 +66,57 @@ namespace GeorgeShop.DAL.Data
             .WithMany(o => o.OrderItems)
             .HasForeignKey(oi => oi.OrderId)
             .OnDelete(DeleteBehavior.Cascade);
+
+
+            builder.Entity<Review>()
+
+    .HasOne(r => r.User)
+
+    .WithMany()
+
+    .HasForeignKey(r => r.UserId)
+
+    .OnDelete(DeleteBehavior.Restrict);
+
+
+
+            builder.Entity<Review>()
+
+                .HasOne(r => r.Product)
+
+                .WithMany()
+
+                .HasForeignKey(r => r.ProductId)
+
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+
+            builder.Entity<Product>()
+
+                .HasOne(p => p.CreatedBy)
+
+                .WithMany()
+
+                .HasForeignKey(p => p.CreatedById)
+
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+
+            builder.Entity<Product>()
+
+                .HasOne(p => p.UpdatedBy)
+
+                .WithMany()
+
+                .HasForeignKey(p => p.UpdatedById)
+
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+
+
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
