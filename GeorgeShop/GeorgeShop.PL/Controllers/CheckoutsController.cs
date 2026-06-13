@@ -26,15 +26,15 @@ namespace GeorgeShop.PL.Controllers
             var response = await _checkoutService.ProcessCheckout(userId,request, cancellation);
             if (!response.Success)
             {
-                return BadRequest();
+                return BadRequest(response.Error);
             }
 
             return Ok(response);
         }
 
-        [HttpGet("sucess")]
+        [HttpGet("success")]
         [AllowAnonymous]
-        public async Task<IActionResult> Sucess([FromQuery] string sessionId)
+        public async Task<IActionResult> Success([FromQuery] string sessionId)
         {
             var result = await _checkoutService.HandleSucess(sessionId);
             return Ok(new

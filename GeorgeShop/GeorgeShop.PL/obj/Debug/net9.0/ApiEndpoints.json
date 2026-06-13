@@ -375,8 +375,8 @@
   },
   {
     "ContainingType": "GeorgeShop.PL.Controllers.CheckoutsController",
-    "Method": "Sucess",
-    "RelativePath": "api/Checkouts/sucess",
+    "Method": "Success",
+    "RelativePath": "api/Checkouts/success",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

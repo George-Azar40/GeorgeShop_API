@@ -11,7 +11,7 @@ namespace GeorgeShop.DAL.Validations
 {
     public class AllowedExtensionsAttribute : ValidationAttribute
     {
-        string[] _extensions = { ".jpg", ".webp" };
+        string[] _extensions = { ".jpg", ".webp" , ".png" , ".jfif" };
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if(value is IFormFile file)
